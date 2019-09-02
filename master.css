@@ -1,10 +1,13 @@
+html {
+  font-family: "Source Code Pro", monospace !important;
+}
+
 td {
   border: 2px solid #333;
   height: 100px;
   width: 100px;
   text-align: center;
   vertical-align: center;
-  font-family: "Source Code Pro", monospace;
   font-size: 75px;
   cursor: pointer;
 }
@@ -21,7 +24,7 @@ table {
   display: none;
   width: 200px;
   top: 120px;
-  background-color: rgba(205,133,63, 0.8);
+  background-color: rgba(30,144,255, 0.5);
   position: absolute;
   left: 50%;
   margin-left: -100px;
@@ -32,3 +35,26 @@ table {
   color: white;
   font-size: 2em;
 }
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button1:hover {background-color: #e7e7e7;}

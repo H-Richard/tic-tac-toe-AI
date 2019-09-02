@@ -2,36 +2,41 @@
 
 <html lang="en" dir="ltr">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
     <meta charset="utf-8">
     <title>Tic Tac Toe </title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+    </style>
 
     <link rel="stylesheet" href="master.css">
   </head>
+
   <body>
 
     <table>
-      <tr>
-        <td class="cell" id="0"></td>
-        <td class="cell" id="1"></td>
-        <td class="cell" id="2"></td>
-      </tr>
-      <tr>
-        <td class="cell" id="3"></td>
-        <td class="cell" id="4"></td>
-        <td class="cell" id="5"></td>
-      </tr>
-      <tr>
-        <td class="cell" id="6"></td>
-        <td class="cell" id="7"></td>
-        <td class="cell" id="8"></td>
-      </tr>
-  <div class="endgame">
-    <div class="text"></div>
-  </div>
-  <button type="button" name="button" onclick="startGame()">Replay</button>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
+	<div class="endgame">
+		<div class="text"></div>
+    <button class="button button1" onClick="startGame()">Replay</button>
+	</div>
 
-    </table>
-  <script type="text/javascript" src="script.js"></script>
+
+  <script src="script.js"></script>
   </body>
 </html>

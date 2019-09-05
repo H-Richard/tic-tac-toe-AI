@@ -1,6 +1,6 @@
 var board;
-const human = '⭘';
-const ai = '⤫';
+const human = 'o';
+const ai = 'x';
 const winCondition = [
 	[0, 1, 2],
 	[3, 4, 5],

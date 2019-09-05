@@ -1,5 +1,5 @@
 html {
-  font-family: "Source Code Pro", monospace !important;
+  font-family: 'Chilanka', cursive !important;
 }
 
 td {
@@ -37,6 +37,7 @@ table {
 }
 
 .button {
+  font-family: 'Chilanka', cursive !important;
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;

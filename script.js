@@ -119,7 +119,7 @@ function minimax(newBoard, player) {
 
 	var bestMove;
 	if(player === ai) {
-		var bestScore = -10000;
+		var bestScore = Number.MIN_SAFE_INTEGER;
 		for(var i = 0; i < moves.length; i++) {
 			if (moves[i].score > bestScore) {
 				bestScore = moves[i].score;
@@ -127,7 +127,7 @@ function minimax(newBoard, player) {
 			}
 		}
 	} else {
-		var bestScore = 10000;
+		var bestScore = Number.MAX_SAFE_INTEGER;
 		for(var i = 0; i < moves.length; i++) {
 			if (moves[i].score < bestScore) {
 				bestScore = moves[i].score;

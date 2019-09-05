@@ -10,11 +10,16 @@
     </style>
 
     <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
   </head>
 
   <body>
+    <div class="title">
+      <h1>Tic-Tac-Toe AI</h1>
+    </div>
 
     <table>
+
 		<tr>
 			<td class="cell" id="0"></td>
 			<td class="cell" id="1"></td>
@@ -36,7 +41,65 @@
     <button class="button button1" onClick="startGame()">Replay</button>
 	</div>
 
+  <div class="codeblock">
+    <figure>
+    <figcaption>minimax function</figcaption>
+    <pre>
+      <code  class="language-javascript">
+        function minimax(newBoard, player) {
+        	var availSpots = emptySquares();
 
+        	if (checkWin(newBoard, human)) {
+        		return {score: -10};
+        	} else if (checkWin(newBoard, ai)) {
+        		return {score: 10};
+        	} else if (availSpots.length === 0) {
+        		return {score: 0};
+        	}
+        	var moves = [];
+        	for (var i = 0; i < availSpots.length; i++) {
+        		var move = {};
+        		move.index = newBoard[availSpots[i]];
+        		newBoard[availSpots[i]] = player;
+
+        		if (player == ai) {
+        			var result = minimax(newBoard, human);
+        			move.score = result.score;
+        		} else {
+        			var result = minimax(newBoard, ai);
+        			move.score = result.score;
+        		}
+
+        		newBoard[availSpots[i]] = move.index;
+
+        		moves.push(move);
+        	}
+
+        	var bestMove;
+        	if(player === ai) {
+        		var bestScore = Number.MIN_SAFE_INTEGER;
+        		for(var i = 0; i < moves.length; i++) {
+        			if (moves[i].score > bestScore) {
+        				bestScore = moves[i].score;
+        				bestMove = i;
+        			}
+        		}
+        	} else {
+        		var bestScore = Number.MAX_SAFE_INTEGER;
+        		for(var i = 0; i < moves.length; i++) {
+        			if (moves[i].score < bestScore) {
+        				bestScore = moves[i].score;
+        				bestMove = i;
+        			}
+        		}
+        	}
+      </code>
+    </pre>
+  </figure>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
   <script src="script.js"></script>
   </body>
 </html>
